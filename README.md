@@ -54,3 +54,11 @@ LoRa P2P status:
   ```
  - Add EUI, App EUI, App Key: https://eu1.cloud.thethings.network/console/applications/m5-ttn-test/devices
  - Create the codes and add to device .ino code
+ - Download the correct board support for nrf chip: https://github.com/adafruit/Adafruit_nRF52_Arduino/files/15325649/adafruit-nrfutil.zip
+ - unzip and replace the IDE default board support:
+  ```
+mv ~/Library/Arduino15/packages/rakwireless/hardware/nrf52/1.3.3/tools/adafruit-nrfutil/macos/adafruit-nrfutil ~/Library/Arduino15/packages/rakwireless/hardware/nrf52/1.3.3/tools/adafruit-nrfutil/macos/adafruit-nrfutil.bak
+cp ~/Downloads/adafruit-nrfutil/macos/adafruit-nrfutil ~/Library/Arduino15/packages/rakwireless/hardware/nrf52/1.3.3/tools/adafruit-nrfutil/macos/
+  ```
+ - compile
+   
