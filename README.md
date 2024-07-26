@@ -10,21 +10,22 @@
 
 Should return the following:
 
-   DR 3
-   Class 0
-   Subband 1
-   Fport 2
-   Unconfirmed Message
-   Region AU915
-LoRa P2P status:
-   P2P frequency 916000000
-   P2P TX Power 22
-   P2P BW 125
-   P2P SF 7
-   P2P CR 1
-   P2P Preamble length 8
-   P2P Symbol Timeout 0
-============================
+ **  
+ >DR 3
+ >  Class 0
+ >  Subband 1
+ >  Fport 2
+ >  Unconfirmed Message
+ >  Region AU915
+ >LoRa P2P status:
+ >  P2P frequency 916000000
+ >  P2P TX Power 22
+ >  P2P BW 125
+ >  P2P SF 7
+ >  P2P CR 1
+ >  P2P Preamble length 8
+ >  P2P Symbol Timeout 0
+ >============================**
   
  - Add EUI, App EUI, App Key: https://eu1.cloud.thethings.network/console/applications/m5-ttn-test/devices
  - Create the codes and add to device .ino code
