@@ -1,2 +1,7 @@
 # FertiRega
-Update
+## WisBlock RAK 4631 Starter
+### Setup
+- https://docs.rakwireless.com/Product-Categories/WisBlock/RAK4631/Datasheet/#overview
+- Start Code from https://github.com/RAKWireless/WisBlock/blob/master/examples/RAK4630/solutions/Intelligent_Agriculture/Intelligent_Agriculture.ino
+- Install UNO Lib modules (tool->manage libs->install Sx126x): https://github.com/beegee-tokyo/SX126x-Arduino/
+- Boards Manager (tool->add board): https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json 
