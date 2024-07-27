@@ -66,9 +66,9 @@ static lmh_callback_t g_lora_callbacks = {
 };
 
 //OTAA keys !!!! KEYS ARE MSB !!!!
-uint8_t nodeDeviceEUI[8] = {0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x33, 0x33};
-uint8_t nodeAppEUI[8] = {0xB8, 0x27, 0xEB, 0xFF, 0xFE, 0x39, 0x00, 0x00};
-uint8_t nodeAppKey[16] = {0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88, 0x88};
+uint8_t nodeDeviceEUI[8] = {0xAC, 0x1F, 0x09, 0xFF, 0xFE, 0x18, 0x3A, 0x19};
+uint8_t nodeAppEUI[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+uint8_t nodeAppKey[16] = {0xE0, 0xC9, 0xF7, 0xA7, 0xCC, 0x09, 0xFC, 0x70, 0x53, 0x67, 0x20, 0x39, 0xED, 0x74, 0x47, 0x36};
 
 // ABP keys
 uint32_t nodeDevAddr = 0x260116F8;
@@ -106,13 +106,6 @@ void setup()
     }
   }
 
-  // Init Modbus
-  if (!ModbusRTUClient.begin(9600))
-  {
-    Serial.println("Failed to start Modbus RTU Client!");
-    while (1)
-      ;
-  }
   // Initialize LoRa chip.
   lora_rak4630_init();
 
@@ -217,14 +210,28 @@ void loop2()
  
 
   Serial.printf("loop2 test %d-------\n", par);
+  /*
+  if (lmh_join_status_get() != LMH_SET)
+  {
+    //Not joined, try again 
+      // Initialize LoRaWan
+      lmh_init(&g_lora_callbacks, g_lora_param_init, doOTAA, g_CurrentClass, g_CurrentRegion);
+    
+  }*/
   
-  delay(5000);
+  delay(15000);
 }
 
 void loop()
 {
   // Put your application tasks here, like reading of sensors,
   // Controlling actuators and/or other functions.
+   unsigned short par=0;
+ 
+
+  Serial.printf("loop test %d-------\n", par);
+  
+  delay(5000);
 }
 
 /**@brief LoRa function for handling HasJoined event.
