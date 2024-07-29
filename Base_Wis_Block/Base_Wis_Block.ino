@@ -28,8 +28,8 @@ bool doOTAA = true;   // OTAA is used by default.
 #define SCHED_MAX_EVENT_DATA_SIZE APP_TIMER_SCHED_EVENT_DATA_SIZE /**< Maximum size of scheduler events. */
 #define SCHED_QUEUE_SIZE 60                     /**< Maximum number of events in the scheduler queue. */
 #define LORAWAN_DATERATE DR_0                   /*LoRaMac datarates definition, from DR_0 to DR_5*/
-#define LORAWAN_TX_POWER TX_POWER_5             /*LoRaMac tx power definition, from TX_POWER_0 to TX_POWER_15*/
-#define JOINREQ_NBTRIALS 3                      /**< Number of trials for the join request. */
+#define LORAWAN_TX_POWER TX_POWER_10             /*LoRaMac tx power definition, from TX_POWER_0 to TX_POWER_15*/
+#define JOINREQ_NBTRIALS 10                      /**< Number of trials for the join request. */
 DeviceClass_t g_CurrentClass = CLASS_A;         /* class definition*/
 LoRaMacRegion_t g_CurrentRegion = LORAMAC_REGION_EU868;    /* Region:EU868*/
 lmh_confirm g_CurrentConfirm = LMH_UNCONFIRMED_MSG;         /* confirm/unconfirm packet definition*/
@@ -111,6 +111,7 @@ void setup()
 
   Serial.println("=====================================");
   Serial.println("Welcome to RAK4630 LoRaWan!!!");
+  Serial.println("===============File Version 0.2===================");
   if (doOTAA)
   {
     Serial.println("Type: OTAA");
